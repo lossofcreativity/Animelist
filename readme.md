@@ -1,156 +1,32 @@
-# Animeflow
+# 🎬 Animeflow
 
-**Anime & Manga Discovery Platform** | Author: Avaya Shrestha | Deployed: May 28, 2026 | GitHub: lossofcreativity
-
----
-
-## Features
-
-- 🎬 Dual Search - Anime & Manga separate tabs
-- 🔖 Favorites - Save to localStorage
-- 🌓 Dark/Light Theme - Persistent
-- 👨‍🎨 Author Pages - View creator works
-- 👥 Character Modals - Click for details
-- 🏢 Studio Pages - Browse by studio
-- 🎭 Genre Filtering - 9+ genres
-- 📜 Infinite Scroll - Auto-load more
-- 💀 Skeleton Loading - Smooth animations
-- 🎨 3D Buttons - Gradient hover effects
-- 🔗 Clean URLs - No hash fragments
+**Anime & Manga Discovery Platform**  
+*Author: Avaya Shrestha | Deployed: May 28, 2026 | GitHub: [@lossofcreativity](https://github.com/lossofcreativity)*
 
 ---
 
-## Quick Start
+Animeflow is a sleek, single-page application (SPA) designed to help users discover, search, and track their favorite anime and manga. Powered by the AniList GraphQL API, it features modern UI elements like glassmorphism effects, 3D interactive components, and fully client-side routing.
 
-1. Save `index.html` in a folder
-2. Save `server.py` in same folder
-3. Run: `python3 server.py`
-4. Open: `http://localhost:3000`
+## ✨ Features
 
----
-
-## Server Script (server.py)
-
-#!/usr/bin/env python3
-
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-
-import os
-
-class SPAHandler(SimpleHTTPRequestHandler):
-
-    def do_GET(self):
-    
-        if os.path.exists(self.path[1:]) and not self.path[1:] == '':
-        
-            super().do_GET()
-            
-        else:
-        
-            self.path = 'index.html'
-            
-            super().do_GET()
-            
-
-if __name__ == '__main__':
-
-    port = 3000
-    
-    print(f"Serving SPA at http://localhost:{port}")
-    
-    print("Press Ctrl+C to stop")
-    
-    HTTPServer(("", port), SPAHandler).serve_forever()
-    
-
-# Project Structure
-animeflow/
-
-├── index.html
-
-├── server.py
-
-└── README.md
-
+- **🎬 Dual Search:** Separate, dedicated tabs for Anime and Manga.
+- **🔖 Favorites System:** Save your top picks directly to `localStorage` (no backend needed).
+- **🌓 Persistent Dark/Light Theme:** Matches your preference and stays saved across sessions.
+- **👨‍🎨 Deep-Dive Creator Pages:** Explore dedicated profiles and works by authors and studios.
+- **👥 Interactive Character Modals:** Quick-click overlays showing rich character details.
+- **🎭 Advanced Filtering:** Browse content seamlessly using 9+ distinct genres.
+- **📜 Infinite Scroll:** Smooth, automated content loading as you browse.
+- **💀 Skeleton Loading:** Fluid, polished animations for asynchronous data fetching.
+- **🎨 3D Interactive Elements:** Gorgeous gradient hover effects and tactile buttons.
+- **🔗 Clean URLs:** Native history API routing without ugly hash (`#`) fragments.
 
 ---
 
-## Usage Guide
+## 🚀 Quick Start
 
-| Page | Description |
-|------|-------------|
-| Home | Trending anime (no infinite scroll) |
-| Anime | Browse by genre + infinite scroll |
-| Manga | Browse manga + infinite scroll |
-| Authors | Popular creators |
-| Favorites | Saved items |
-| Search | Search bar (top right) |
-
-### On Detail Pages
-
-- Click **genres** → similar anime
-- Click **studios** → studio works
-- Click **authors** → author profile
-- Click **characters** → modal with details
-- Click **heart** → add to favorites
-
----
-
-## API
-
-Powered by **AniList GraphQL API**
-
-**Rate Limit:** 90 requests per minute
-
----
-
-## Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Favorites not saving | Check localStorage enabled |
-| 404 on reload | Use server.py (not basic HTTP server) |
-| Images not loading | Refresh or check connection |
-| Dark mode not persisting | Clear browser cache |
-
----
-
-## Browser Support
-
-Chrome 90+ ✅ | Firefox 88+ ✅ | Safari 14+ ✅ | Edge 90+ ✅
-
----
-
-## Customization
-
-- **Change colors** - Edit CSS `:root` variables
-- **Add genres** - Modify `categories` array in `animeContainerPage()`
-- **Change items per page** - Adjust `perPage` parameter in API calls
-
----
-
-## Contributing
-
-1. Fork repo
-2. Create branch (`git checkout -b feature/Amazing`)
-3. Commit changes
-4. Push to branch
-5. Open Pull Request
-
-**Ideas:** User accounts, watchlist, seasonal calendar, mobile app
-
----
-
-## Contact
-
-**Author:** Avaya Shrestha
-**GitHub:** lossofcreativity
-**Deployed:** May 28, 2026
-
----
-
-<div align="center">
-
-**Made with ❤️ by Avaya Shrestha**
-
-</div>
+1. Save `index.html` in your project folder.
+2. Save `server.py` in the same folder.
+3. Fire up the local routing server:
+```bash
+   python3 server.py
+4. 
