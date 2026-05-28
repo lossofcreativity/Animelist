@@ -32,7 +32,9 @@
 ## Server Script (server.py)
 
 #!/usr/bin/env python3
+
 from http.server import HTTPServer, SimpleHTTPRequestHandler
+
 import os
 
 class SPAHandler(SimpleHTTPRequestHandler):
@@ -51,8 +53,11 @@ if __name__ == '__main__':
 
 # Project Structure
 animeflow/
+
 ├── index.html
+
 ├── server.py
+
 └── README.md
 
 
