@@ -1,5 +1,9 @@
 **Anime & Manga Discovery Platform**  
-*Author: Avaya Shrestha | Deployed: May 28, 2026 | GitHub: [@lossofcreativity](https://github.com/lossofcreativity)*
+*Author: Avaya Shrestha | Deployed: May 28, 2026 | GitHub: [@lossofcreativity](https://github.com/lossofcreativity)* |
+
+**DEPLOYED AT**:  `Netlify`
+
+WEBSITE: [ANILISTS](https://myanilists.netlify.app)
 
 ---
 
